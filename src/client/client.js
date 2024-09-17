@@ -12,7 +12,6 @@ import path from "path";
 
 dotenv.config();
 
-
 // main variables
 const portNumber = process.env.PORT_NUMBER || 2121;
 const startIP = process.env.START_IP || "192.168.179.140"; // Default values as fallback
@@ -290,9 +289,11 @@ const downloadFile = async (url, fileName) => {
     const availableDevices = await getAvailableDevices();
     const results = await scanPort(availableDevices, portNumber);
     results.forEach((result) => {
-      console.log(
-        `IP: ${result.ip}, Port: ${result.port}, Status: ${result.status}`
-      );
+      if (result.status == "open") {
+        console.log(
+          `IP: ${result.ip}, Port: ${result.port}, Status: ${result.status}`
+        );
+      }
     });
   } catch (error) {
     console.error("Error:", error);
