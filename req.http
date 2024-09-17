@@ -1,0 +1,31 @@
+POST http://localhost:2121/auth/login
+Content-Type: application/json
+x-api-key: fe93ced5bb7c2f401b4396ae5f380d8b
+
+{
+    "username": "default",
+    "password": "default"
+}
+
+###
+POST http://localhost:2121/auth/login
+Content-Type: application/json
+x-api-key: fe93ced5bb7c2f401b4396ae5f380d8b
+
+{
+    "username": "default",
+    "password": "default"
+}
+
+
+###
+GET http://localhost:2121/files
+x-api-key: fe93ced5bb7c2f401b4396ae5f380d8b
+x-session-id: xfhbufbrpqsmvx5kqk55znob
+
+
+###
+GET http://localhost:2121/files/package.json
+x-api-key: fe93ced5bb7c2f401b4396ae5f380d8b
+x-session-id: widzygm4y8xxppk6b3ly5pag
+
